@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Café</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4a2c2a;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #hero {
+            background: url('imagen de fondo.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        #productos {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .productos-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .producto img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        #contacto form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contacto form input, #contacto form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4a2c2a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #613d3b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4a2c2a;
+            color: #fff;
+        }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 768px) {
+            .productos-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            #hero {
+                padding: 30px 10px;
+            }
+            header nav ul {
+                flex-direction: column;
+            }
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Café Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>El mejor café, directo a tu puerta</h2>
+        <p>Descubre nuestra selección de cafés orgánicos de alta calidad.</p>
+        <button onclick="alert('Gracias por visitarnos!')">Comprar Ahora</button>
+    </section>
+
+    <section id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="capucchino.webp" alt="Café Colombiano">
+                <h3>Café Colombiano</h3>
+                <p>$10.00</p>
+                <button>Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="cafe de etiopia.jpg" alt="Café Etiopía">
+                <h3>Café de Etiopía</h3>
+                <p>$12.00</p>
+                <button>Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="café éruano.webp" alt="Café Peruano">
+                <h3>Café Peruano</h3>
+                <p>$11.00</p>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos apasionados por el café y trabajamos directamente con agricultores locales para ofrecerte granos de la mejor calidad.</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form action="https://formspree.io/f/yourFormID" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Café Online - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
+
+
